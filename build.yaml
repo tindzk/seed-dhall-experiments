@@ -1,0 +1,61 @@
+project: {}
+modules:
+  example:
+    main:
+    - sources:
+      - shared/src
+      root: shared
+      deps: []
+      scalaVersion: 2.13.0
+    - sources:
+      - jvm/src
+      root: jvm
+      deps:
+      - version: 3.8.0
+        organisation: com.github.pathikrit
+        artefact: better-files
+      - version: 3.4.2
+        organisation: com.twelvemonkeys.imageio
+        artefact: imageio-jpeg
+      - version: 3.4.2
+        organisation: com.twelvemonkeys.imageio
+        artefact: imageio-core
+      scalaVersion: 2.13.0
+    - sources:
+      - native/src
+      root: native
+      scalaNativeVersion: 0.3.9
+      deps: []
+      scalaVersion: 2.11.12
+    test:
+    - sources:
+      - shared/test
+      root: shared
+      testFrameworks:
+      - minitest.runner.Framework
+      deps:
+      - version: 2.6.0
+        organisation: io.monix
+        artefact: minitest
+      scalaVersion: 2.13.0
+    - sources:
+      - jvm/test
+      root: jvm
+      testFrameworks:
+      - minitest.runner.Framework
+      deps:
+      - version: 2.6.0
+        organisation: io.monix
+        artefact: minitest
+      scalaVersion: 2.13.0
+    - sources:
+      - native/test
+      root: native
+      testFrameworks:
+      - minitest.runner.Framework
+      scalaNativeVersion: 0.3.9
+      deps:
+      - version: 2.6.0
+        organisation: io.monix
+        artefact: minitest
+      scalaVersion: 2.11.12

@@ -1,0 +1,104 @@
+{
+  "modules": {
+    "example": {
+      "main": [
+        {
+          "deps": [],
+          "root": "shared",
+          "scalaVersion": "2.13.0",
+          "sources": [
+            "shared/src"
+          ]
+        },
+        {
+          "deps": [
+            {
+              "artefact": "better-files",
+              "organisation": "com.github.pathikrit",
+              "version": "3.8.0"
+            },
+            {
+              "artefact": "imageio-jpeg",
+              "organisation": "com.twelvemonkeys.imageio",
+              "version": "3.4.2"
+            },
+            {
+              "artefact": "imageio-core",
+              "organisation": "com.twelvemonkeys.imageio",
+              "version": "3.4.2"
+            }
+          ],
+          "root": "jvm",
+          "scalaVersion": "2.13.0",
+          "sources": [
+            "jvm/src"
+          ]
+        },
+        {
+          "deps": [],
+          "root": "native",
+          "scalaNativeVersion": "0.3.9",
+          "scalaVersion": "2.11.12",
+          "sources": [
+            "native/src"
+          ]
+        }
+      ],
+      "test": [
+        {
+          "deps": [
+            {
+              "artefact": "minitest",
+              "organisation": "io.monix",
+              "version": "2.6.0"
+            }
+          ],
+          "root": "shared",
+          "scalaVersion": "2.13.0",
+          "sources": [
+            "shared/test"
+          ],
+          "testFrameworks": [
+            "minitest.runner.Framework"
+          ]
+        },
+        {
+          "deps": [
+            {
+              "artefact": "minitest",
+              "organisation": "io.monix",
+              "version": "2.6.0"
+            }
+          ],
+          "root": "jvm",
+          "scalaVersion": "2.13.0",
+          "sources": [
+            "jvm/test"
+          ],
+          "testFrameworks": [
+            "minitest.runner.Framework"
+          ]
+        },
+        {
+          "deps": [
+            {
+              "artefact": "minitest",
+              "organisation": "io.monix",
+              "version": "2.6.0"
+            }
+          ],
+          "root": "native",
+          "scalaNativeVersion": "0.3.9",
+          "scalaVersion": "2.11.12",
+          "sources": [
+            "native/test"
+          ],
+          "testFrameworks": [
+            "minitest.runner.Framework"
+          ]
+        }
+      ]
+    }
+  },
+  "project": {}
+}
